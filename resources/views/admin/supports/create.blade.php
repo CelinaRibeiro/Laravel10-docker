@@ -16,7 +16,8 @@
           <textarea name="body" class="form-control" cols="30" rows="10"></textarea>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary m-2">Enviar</button>
+      <button type="submit" class="btn btn-primary m-2">Salvar</button>
+      <a href="{{route('supports.index')}}" class="btn btn-sm btn-secondary m-2">Voltar</a>
     </form>
   </div>
 @endsection

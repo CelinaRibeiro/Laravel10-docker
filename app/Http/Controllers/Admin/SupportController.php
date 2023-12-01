@@ -45,7 +45,9 @@ class SupportController extends Controller
         $support->create($data);
 
         return redirect()
-            ->route('supports.index');
+            ->route('supports.index')
+            ->with('message', 'Suporte cadastrado com sucesso!');
+            
     }
 
     public function edit($id) 
@@ -75,7 +77,8 @@ class SupportController extends Controller
        ]));
 
        return redirect()
-            ->route('supports.index');
+            ->route('supports.index')
+            ->with('message', 'Suporte atualizado com sucesso!');
 
     }
 
@@ -90,7 +93,8 @@ class SupportController extends Controller
        $support->delete();
 
        return redirect()
-            ->route('supports.index');
+            ->route('supports.index')
+            ->with('message', 'Suporte excluído com sucesso!');
 
     }
 
