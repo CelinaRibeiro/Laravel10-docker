@@ -11,7 +11,7 @@
         <p>Descrição: {{$support->body}}</p>
        
         <a href="{{route('supports.index')}}" class="btn btn-sm btn-secondary mb-4">Voltar</a>
-        <form action="{{route('supports.destroy', $support->id)}}" method="POST" class="d-inline">
+        <form action="{{route('supports.destroy', $support->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Tem certeza que deseja excluir?')">
           @csrf
           @method('DELETE')
           <button type="submit" class="btn btn-sm btn-danger mb-4">Excluir</button>
