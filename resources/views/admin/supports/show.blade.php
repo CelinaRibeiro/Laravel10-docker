@@ -10,12 +10,12 @@
         <p class="mt-4">Status: {{$support->status}}</p>
         <p>Descrição: {{$support->body}}</p>
        
-        <a href="{{route('supports.index')}}" class="btn btn-sm btn-secondary mb-4">Voltar</a>
         <form action="{{route('supports.destroy', $support->id)}}" method="POST" class="d-inline" onsubmit="return confirm('Tem certeza que deseja excluir?')">
           @csrf
           @method('DELETE')
-          <button type="submit" class="btn btn-sm btn-danger mb-4">Excluir</button>
+          <button type="submit" class="btn btn-sm btn-danger mb-2">Excluir</button>
         </form>
+        <a href="{{route('supports.index')}}" class="btn btn-sm btn-link mb-2">Voltar</a>
       </div>
     </div>
   </div>

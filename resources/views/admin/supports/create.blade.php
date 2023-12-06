@@ -18,8 +18,9 @@
           <div class="invalid-feedback">{{ $errors->first('body')}}</div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary m-2">Salvar</button>
-      <a href="{{route('supports.index')}}" class="btn btn-sm btn-secondary m-2">Voltar</a>
+      <button type="submit" class="btn btn-sm btn-primary m-2">Salvar</button>
+      <button type="reset" class="btn btn-sm btn-secondary m-2">Limpar</button>
+      <a href="{{route('supports.index')}}" class="btn btn-sm btn-link m-2">Voltar</a>
     </form>
   </div>
 @endsection
